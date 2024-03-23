@@ -1,0 +1,214 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Directory</title>
+ 
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>College Name</h1>
+    </header>
+
+    <!-- Introduction Section -->
+    <section>
+        <h2>Faculty Directory</h2>
+        <p>Welcome to the faculty role allocation page. Here, you can explore the roles of our esteemed faculty members.</p>
+    </section>
+
+   <section>
+    <h3>Filter Faculty</h3>
+    <label for="filterDropdown">Search by Area:</label>
+    <select id="filterDropdown" onchange="filterByField(this.value)">
+        <option value="all">All Areas</option>
+        <option value="OB and HR">OB and HR</option>
+        <option value="Marketing">Marketing</option>
+        <option value="IT System and Analytics">IT System and Analytics</option>
+        <option value="OM and Quant. Techniques">OM and Quant. Techniques</option>
+        <option value="Humanities and Liberal Arts">Humanities and Liberal Arts</option>
+        <option value="Finance and Accounting">Finance and Accounting</option>
+        <option value="Economics">Economics</option>
+        <option value="Strategy and Entrepreneurship">Strategy and Entrepreneurship</option>
+    </select>
+</section>
+
+    <!-- Search Box -->
+    <section>
+        <input type="text" id="searchInput" placeholder="Search Faculty...">
+        <button onclick="searchFaculty()">Search</button>
+    </section>
+
+    <!-- Faculty List Section -->
+    <section id="facultyList">
+        <!-- Faculty list will be dynamically populated here -->
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Contact us: example@iimbodhgaya.ac.in | Phone: +91 1234567890</p>
+    </footer>
+
+    <!-- JavaScript to handle filtering and search functionality -->
+    <script>
+        // Sample data for faculty
+        const facultyData = {
+            "OB and HR": [
+                "Prof. 1 - Assistant Professor",
+                "Prof. 2 - Assistant Professor",
+                "Prof. 3 - Assistant Professor",
+                "Prof. 4 - Assistant Professor",
+                "Prof. 5 - Assistant Professor",
+                "Prof. 6 - Assistant Professor",
+                "Prof. 7 - Assistant Professor",
+                "Prof. 8 - Assistant Professor",
+                "Prof. 9 - Assistant Professor",
+                "Prof. 10 - Assistant Professor"
+
+            ],
+            "Marketing": [
+                "Prof. 11 - Assistant Professor",
+                "Prof. 12 - Assistant Professor",
+                "Prof. 13 - Assistant Professor",
+                "Prof. 14 - Assistant Professor",
+                "Prof. 15 - Assistant Professor",
+                "Prof. 16 - Assistant Professor",
+                "Prof. 17 - Assistant Professor",
+                "Prof. 18 - Assistant Professor",
+                "Prof. 19 - Assistant Professor",
+                "Prof. 20 - Assistant Professor"
+
+            ],
+
+           "IT System and Analytics": [
+                "Prof. 21 - Assistant Professor",
+                "Prof. 22 - Assistant Professor",
+                "Prof. 23 - Assistant Professor",
+                "Prof. 24 - Assistant Professor",
+                "Prof. 25 - Assistant Professor",
+                "Prof. 26 - Assistant Professor",
+                "Prof. 27 - Assistant Professor",
+                "Prof. 28 - Assistant Professor",
+                "Prof. 29 - Assistant Professor",
+                "Prof. 30 - Assistant Professor"
+
+            ],
+
+
+"OM and Quant. Techniques": [
+                "Prof. 31 - Assistant Professor",
+                "Prof. 32 - Assistant Professor",
+                "Prof. 33 - Assistant Professor",
+                "Prof. 34 - Assistant Professor",
+                "Prof. 35 - Assistant Professor",
+                "Prof. 36 - Assistant Professor",
+                "Prof. 37 - Assistant Professor",
+                "Prof. 38 - Assistant Professor",
+                "Prof. 39 - Assistant Professor",
+                "Prof. 40 - Assistant Professor"
+
+            ],
+
+"Humanities and Liberal Arts": [
+
+                "Prof. 41 - Assistant Professor",
+                "Prof. 42 - Assistant Professor",
+                "Prof. 43 - Assistant Professor",
+                "Prof. 44 - Assistant Professor",
+                "Prof. 45 - Assistant Professor",
+                "Prof. 46 - Assistant Professor",
+                "Prof. 47 - Assistant Professor",
+                "Prof. 48 - Assistant Professor",
+                "Prof. 49 - Assistant Professor",
+                "Prof. 50 - Assistant Professor"
+
+            ],
+
+
+"Finance and Accounting" : [
+                "Prof. 51 - Assistant Professor",
+                "Prof. 52 - Assistant Professor",
+                "Prof. 53 - Assistant Professor",
+                "Prof. 54 - Assistant Professor",
+                "Prof. 55 - Assistant Professor",
+                "Prof. 56 - Assistant Professor",
+                "Prof. 57 - Assistant Professor",
+                "Prof. 58 - Assistant Professor",
+                "Prof. 59 - Assistant Professor",
+                "Prof. 60 - Assistant Professor"
+
+            ],
+
+
+"Economics" : [
+
+                "Prof. 61 - Assistant Professor",
+                "Prof. 62 - Assistant Professor",
+                "Prof. 63 - Assistant Professor",
+                "Prof. 64 - Assistant Professor",
+                "Prof. 65 - Assistant Professor",
+                "Prof. 66 - Assistant Professor",
+                "Prof. 67 - Assistant Professor",
+                "Prof. 68 - Assistant Professor",
+                "Prof. 69 - Assistant Professor",
+                "Prof. 70 - Assistant Professor"
+
+            ],
+
+"Strategy and Entrepreneurship" : [
+
+                "Prof. 71 - Assistant Professor",
+                "Prof. 72 - Assistant Professor",
+                "Prof. 73 - Assistant Professor",
+                "Prof. 74 - Assistant Professor",
+                "Prof. 75 - Assistant Professor",
+                "Prof. 76 - Assistant Professor",
+                "Prof. 77 - Assistant Professor",
+                "Prof. 78 - Assistant Professor",
+                "Prof. 79 - Assistant Professor",
+                "Prof. 80 - Assistant Professor"
+
+            ],
+            // Add other departments and faculty data similarly
+        };
+
+        function filterByField(field) {
+            const facultyList = document.getElementById("facultyList");
+            facultyList.innerHTML = ""; // Clear previous list
+
+            if (facultyData.hasOwnProperty(field)) {
+                const faculty = facultyData[field];
+                faculty.forEach(member => {
+                    const listItem = document.createElement("li");
+                    listItem.textContent = member;
+                    facultyList.appendChild(listItem);
+                });
+            } else {
+                facultyList.textContent = "No faculty found in this field.";
+            }
+        }
+
+        function searchFaculty() {
+            const searchInput = document.getElementById("searchInput");
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            const facultyList = document.getElementById("facultyList");
+            facultyList.innerHTML = ""; // Clear previous list
+
+            // Loop through all faculty data and filter matching results
+            for (const field in facultyData) {
+                const faculty = facultyData[field];
+                faculty.forEach(member => {
+                    if (member.toLowerCase().includes(searchTerm)) {
+                        const listItem = document.createElement("li");
+                        listItem.textContent = member;
+                        facultyList.appendChild(listItem);
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
