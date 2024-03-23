@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Website</title>
+<style>
+    /* Styles for the dropdown menu */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Styles for the main navigation */
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a, .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover, .dropdown:hover .dropbtn {
+        background-color: #111;
+    }
+</style>
+</head>
+<body>
+
+<ul>
+    <li class="dropdown">
+        <a href="aboutus.html" class="dropbtn">About Us</a>
+        <div class="dropdown-content">
+            <a href="#">Objective</a>
+            <a href="#">Vision and Mission</a>
+        </div>
+    </li>
+    <li class="dropdown">
+        <a href="academics.html" class="dropbtn">Academics</a>
+        <div class="dropdown-content">
+            <a href="academicprogram.html">Academic Programs</a>
+            <a href="facultydirectory.html">Faculty Directory</a>
+        </div>
+    </li>
+    <li class="dropdown">
+        <a href="admission.html" class="dropbtn">Admissions</a>
+        <div class="dropdown-content">
+            <a href="#">Apply Now</a>
+        </div>
+    </li>
+    <li class="dropdown">
+        <a href="#" class="dropbtn">Research</a>
+        <div class="dropdown-content">
+            <a href="#">View Research and Publications</a>
+        </div>
+    </li>
+    <li class="dropdown">
+        <a href="#" class="dropbtn">Alumni</a>
+        <div class="dropdown-content">
+            <a href="#">View Alumni Achievements</a>
+        </div>
+    </li>
+    <li class="dropdown">
+        <a href="contactus.html" class="dropbtn">Contact Us</a>
+        <div class="dropdown-content">
+            <a href="#">Contact Number: +1 234 567 890</a>
+            <a href="#">Email: university@gmail.com</a>
+        </div>
+    </li>
+</ul>
+
+</body>
+</html>

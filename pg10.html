@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .program-description {
+            margin-top: 20px;
+        }
+        .apply-button {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .apply-button button {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff0000;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+        .apply-button button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Admissions</h1>
+    
+    <div id="phd" class="program-description" style="display: none;">
+        <h2>PhD Program Requirements</h2>
+        <p>This is a generic description of the requirements to apply for the PhD program. Replace this text with specific details about the PhD program requirements.</p>
+        <div class="apply-button">
+             <a href="applynow.html"><button>Apply Now</button> </a>
+
+        </div>
+    </div>
+    
+    <div id="bba" class="program-description" style="display: none;">
+        <h2>BBA Program Requirements</h2>
+        <p>This is a generic description of the requirements to apply for the BBA program. Replace this text with specific details about the BBA program requirements.</p>
+        <div class="apply-button">
+             <a href="applynow.html"><button>Apply Now</button> </a>
+
+        </div>
+    </div>
+    
+    <div id="btech" class="program-description" style="display: none;">
+        <h2>B.Tech Program Requirements</h2>
+        <p>This is a generic description of the requirements to apply for the B.Tech program. Replace this text with specific details about the B.Tech program requirements.</p>
+        <div class="apply-button">
+            <a href="applynow.html"><button>Apply Now</button> </a>
+        </div>
+    </div>
+    
+    <button onclick="showProgram('phd')">PhD</button>
+    <button onclick="showProgram('bba')">BBA</button>
+    <button onclick="showProgram('btech')">B.Tech</button>
+</div>
+
+<script>
+    function showProgram(program) {
+        var programDescriptions = document.getElementsByClassName("program-description");
+        for (var i = 0; i < programDescriptions.length; i++) {
+            programDescriptions[i].style.display = "none";
+        }
+        document.getElementById(program).style.display = "block";
+    }
+</script>
+
+</body>
+</html>
