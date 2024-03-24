@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
         }
         .container {
             max-width: 800px;
@@ -18,12 +18,15 @@
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ddd; /* Border */
         }
         h1, h2 {
             text-align: center;
+            color: #333;
         }
         .program-description {
             margin-top: 20px;
+            color: #555;
         }
         .apply-button {
             display: block;
@@ -42,6 +45,16 @@
         .apply-button button:hover {
             background-color: #cc0000;
         }
+        .image-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #ddd; /* Border */
+        }
     </style>
 </head>
 <body>
@@ -54,7 +67,6 @@
         <p>This is a generic description of the requirements to apply for the PhD program. Replace this text with specific details about the PhD program requirements.</p>
         <div class="apply-button">
              <a href="applynow.html"><button>Apply Now</button> </a>
-
         </div>
     </div>
     
@@ -63,7 +75,6 @@
         <p>This is a generic description of the requirements to apply for the BBA program. Replace this text with specific details about the BBA program requirements.</p>
         <div class="apply-button">
              <a href="applynow.html"><button>Apply Now</button> </a>
-
         </div>
     </div>
     
@@ -78,6 +89,12 @@
     <button onclick="showProgram('phd')">PhD</button>
     <button onclick="showProgram('bba')">BBA</button>
     <button onclick="showProgram('btech')">B.Tech</button>
+    
+    <!-- Add image container here -->
+    <div class="image-container">
+ <img src= "https://github.com/sc0utopcod/PMKVY/blob/main/images%20(1).jpeg?raw=true" alt="Image">
+       
+    </div>
 </div>
 
 <script>
