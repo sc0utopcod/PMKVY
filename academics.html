@@ -1,29 +1,76 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<body>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website</title>
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation styles */
+        .navigation {
+            background-color: #333;
+            border: 2px solid #ff7f0e;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .navigation a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
 .image-container {
             margin-top: 20px; /* Add margin for spacing */
             text-align: center; /* Center align image */
         }
 
-        /* Image */
+        /* Image container styles */
         .image-container img {
-            max-width: 100%; /* Ensure image fills container width */
+            width: 500px; /* Ensure image fills container width */
             height: auto; /* Maintain aspect ratio */
             border: 2px solid #ddd; /* Border */
             border-radius: 5px; /* Rounded corners */
         }
-  </style>
-<a href="academicprogram.html">Academic Program</a> <br><br>
-<a href="facultydirectory.html">Faculty Directory</a>
 
-<br><br>
-<a href="BetterHomepage.html">Go to Home Page</a>
+        /* Footer styles */
+        .footer {
+            background-color: #333;
+            border: 2px solid #ff7f0e;
+            border-radius: 5px;
+            padding: 10px;
+        }
 
-<div class="image-container">
-    <img src="https://github.com/sc0utopcod/PMKVY/blob/main/images.jpeg?raw=true" alt="Image">
-</div>
-</body>
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
 </head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <a href="academicprogram.html">Academic Program</a>
+            <a href="facultydirectory.html">Faculty Directory</a>
+        </div>
+        <div class="image-container">
+            <img src="https://github.com/sc0utopcod/PMKVY/blob/main/images.jpeg?raw=true" alt="Image">
+        </div>
+        <div class="footer">
+            <a href="BetterHomepage.html">Go to Home Page</a>
+        </div>
+    </div>
+</body>
 </html>
