@@ -1,57 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>College Website</title>
-<style>
-    /* Styles for the dropdown menu */
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website</title>
+    <style>
+        /* Styles for the dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
 
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 200px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border: 1px solid #ddd; /* Border */
+            border-radius: 5px; /* Rounded corners */
+        }
 
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
-    /* Styles for the main navigation */
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333;
-    }
+        /* Styles for the main navigation */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            border-top: 4px solid #ff7f0e; /* Top border */
+            border-bottom: 4px solid #ff7f0e; /* Bottom border */
+        }
 
-    li {
-        float: left;
-    }
+        li {
+            float: left;
+        }
 
-    li a, .dropbtn {
-        display: inline-block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
 
-    li a:hover, .dropdown:hover .dropbtn {
-        background-color: #111;
-    }
-</style>
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: #111;
+        }
+
+        /* Logo */
+        .logo {
+            width: 150px;
+            height: auto;
+            margin: 10px; /* Add margin for spacing */
+        }
+
+        /* Container for image */
+        .image-container {
+            margin-top: 100px; /* Adjusted margin for better positioning */
+            text-align: center; /* Center align image */
+        }
+
+        /* Image */
+        .image-container img {
+            width: 1000px; /* Increase image size */
+            height: auto; /* Maintain aspect ratio */
+            border: 2px solid #ddd; /* Border */
+            border-radius: 5px; /* Rounded corners */
+        }
+    </style>
 </head>
 <body>
 
+<!-- Logo -->
+<img class="logo" src="C:/Users/anish/Downloads/Screenshot_2024-03-23_190158-removebg-preview.png" alt="College Logo">
+
+<!-- Navigation -->
 <ul>
     <li class="dropdown">
         <a href="aboutus.html" class="dropbtn">About Us</a>
@@ -60,7 +89,7 @@
             <a href="#">Vision and Mission</a>
         </div>
     </li>
-    <li class="dropdown">
+       <li class="dropdown">
         <a href="academics.html" class="dropbtn">Academics</a>
         <div class="dropdown-content">
             <a href="academicprogram.html">Academic Programs</a>
@@ -93,6 +122,11 @@
         </div>
     </li>
 </ul>
+
+<!-- Image Container -->
+<div class="image-container">
+    <img src="C:\Users\anish\OneDrive\Pictures\iim bg\new.jpeg" alt="Image">
+</div>
 
 </body>
 </html>
